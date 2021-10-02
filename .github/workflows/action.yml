@@ -7,7 +7,6 @@ on:
 
 jobs:
   deploy:
-    needs: Deploy
     name: 'Deploy to production server'
     runs-on: ubuntu-latest
     steps:
