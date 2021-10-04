@@ -321,23 +321,19 @@
     <!-- Header -->
     <div class="header bg-primary pb-6">
       <div class="container-fluid">
-        <div class="header-body">
-          
+        <div class="header-body py-4">
+          @yield('header')
         </div>
       </div>
     </div>
     <!-- Page content -->
     <div class="container-fluid mt--6">
       @yield('content')
-      <!-- Footer -->
+    </div>
+    <!-- Footer -->
+    <div class="container-fluid">
       <footer class="footer pt-0">
-        <div class="row align-items-center justify-content-lg-between">
-          <div class="col-lg-6">
-            <div class="copyright text-center  text-lg-left  text-muted">
-              &copy; 2020 <a href="https://www.creative-tim.com" class="font-weight-bold ml-1" target="_blank">Creative Tim</a>
-            </div>
-          </div>
-        </div>
+        @yield('footer')
       </footer>
     </div>
   </div>
