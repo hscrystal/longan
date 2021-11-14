@@ -1,5 +1,5 @@
 @extends('template.master')
-@section('title','Device')
+@section('title','Dashboard')
 @section('header')
   <!-- Card stats -->
   <div class="row">
