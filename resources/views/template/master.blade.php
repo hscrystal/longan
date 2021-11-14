@@ -70,9 +70,9 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active active-pro" href="upgrade.html">
+              <a class="nav-link active active-pro">
                 <i class="ni ni-send text-dark"></i>
-                <span class="nav-link-text">Upgrade to PRO</span>
+                <span class="nav-link-text" class="font-weight-bold ml-1">&copy; 2021 hscrystaleng</span>
               </a>
             </li>
           </ul>
@@ -329,12 +329,6 @@
     <!-- Page content -->
     <div class="container-fluid mt--6">
       @yield('content')
-    </div>
-    <!-- Footer -->
-    <div class="container-fluid">
-      <footer class="footer pt-0">
-        @yield('footer')
-      </footer>
     </div>
   </div>
   <!-- Argon Scripts -->

@@ -24,3 +24,7 @@ Route::get('/dashboard', function () {
 Route::get('/device', function () {
     return view('device');
 })->name('device');
+
+Route::get('/table', function () {
+    return view('table');
+});
