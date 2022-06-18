@@ -1,21 +1,21 @@
-name: Docker Image CI
+# name: Docker Image CI
 
-on:
-  push:
-    branches:
-      - master
+# on:
+#   push:
+#     branches:
+#       - master
 
-jobs:
-  deploy:
-    name: 'Deploy to production server'
-    runs-on: ubuntu-latest
-    steps:
-      - name: 'Deploy to Production Server'
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.PROD_HOST }}
-          username: ${{ secrets.PROD_USERNAME }}
-          key: ${{ secrets.PROD_KEY }}
-          script: |
-            cd ${{ secrets.PROD_PATH }}
-            git pull
+# jobs:
+#   deploy:
+#     name: 'Deploy to production server'
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: 'Deploy to Production Server'
+#         uses: appleboy/ssh-action@master
+#         with:
+#           host: ${{ secrets.PROD_HOST }}
+#           username: ${{ secrets.PROD_USERNAME }}
+#           key: ${{ secrets.PROD_KEY }}
+#           script: |
+#             cd ${{ secrets.PROD_PATH }}
+#             git pull
