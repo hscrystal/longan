@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,13 +19,16 @@ Route::get('/', function () {
     return redirect()->route('dashboard');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::get('/dashboard', [PageController::class, 'dashboard'])->name('dashboard');
 
-Route::get('/device', function () {
-    return view('device');
-})->name('device');
+Route::get('/device', [PageController::class, 'device'])->name('device');
+
+Route::get('/product', [PageController::class, 'product'])->name('product');
+Route::post('/product/search', [PageController::class, 'search'])->name('product.search');
+
+Route::get('/welcome', function () {
+    return view('welcome');
+})->name('welcome');
 
 Route::get('/table', function () {
     return view('table');
